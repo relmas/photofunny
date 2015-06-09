@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Funphoto</title>
+        
+        <meta name="Title" content="Funphoto" />
+        <meta name="description" content="Funphoto is a HTML5 canvas where you can upload and decorate your photo with stickers.">
+		<meta name="keywords" content="fun, photo, sticker, upload, decorate, canvas, camera, video, media, webcam, capture">
+        
+        <!-- for Facebook -->
+        <meta property="og:title" content="Funphoto"/>
+        <meta property="og:site_name" content="Funphoto"/>
+        <meta property="og:image" content="http://demonisblack.com/code/funphoto/game/share.jpg" />
+        <meta property="og:url" content="http://demonisblack.com/code/funphoto/game/" />
+        <meta property="og:description" content="Funphoto is a HTML5 canvas where you can upload and decorate your photo with stickers.">
+        
+        <!-- for Twitter -->
+        <meta name="twitter:title" content="Funphoto" />
+        <meta name="twitter:description" content="Funphoto is a HTML5 canvas where you can upload and decorate your photo with stickers." />
+        <meta name="twitter:image" content="http://demonisblack.com/code/funphoto/game/share.jpg" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<script>
+        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+            var msViewportStyle = document.createElement("style");
+            msViewportStyle.appendChild(
+                document.createTextNode(
+                    "@-ms-viewport{width:device-width}"
+                )
+            );
+            document.getElementsByTagName("head")[0].
+                appendChild(msViewportStyle);
+        }
+        </script>
+
+        <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!-- CONTENT START-->
+        <div id="mainHolder">
+        
+        	<!-- BROWSER NOT SUPPORT START-->
+        	<div id="notSupportHolder">
+                <div class="notSupport">YOUR BROWSER ISN'T SUPPORTED.<br/>PLEASE UPDATE YOUR BROWSER IN ORDER TO RUN THE APP</div>
+            </div>
+            <!-- BROWSER NOT SUPPORT END-->
+            
+            <!-- ROTATE INSTRUCTION START-->
+            <div id="rotateHolder">
+                <div class="mobileRotate">
+                        <div class="rotateDesc">Rotate your device <br/>to portrait</div>
+                </div>
+            </div>
+            <!-- ROTATE INSTRUCTION END-->
+            
+            <!-- CANVAS START-->
+            <div id="canvasHolder">
+            	<div id="videoHolder">
+                	<video id="webCamera" width="640" height="480" autoplay></video>
+                    <canvas id="webCanvas" width="640" height="480" style="display:none;"></canvas>
+                </div>
+                
+                <a href="" id="btn_download" style="display:none;"></a>
+                <input type="file" accept="image/*" id="btn_hiddenCamera" style="display:none;">
+                <canvas id="appCanvas" width="768" height="1024"></canvas>
+            </div>
+            <!-- CANVAS END-->
+            
+            <!-- PROGRESS BAR LOADER START-->
+            <div id="loaderHolder">
+            	<div class="percentHolder">
+                	<div class="percentIndicator"></div>
+                </div>
+            	<img src="assets/bgLoader.jpg" />
+            </div>
+            <!-- PROGRESS BAR LOADER END-->
+        </div>
+        <!-- CONTENT END-->
+                
+        <script src="js/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.1.min.js"><\/script>')</script>
+        
+        <script src="js/vendor/preloadjs-0.6.0.min.js"></script>
+        <script src="js/vendor/easeljs-0.8.0.min.js"></script>
+        <script src="js/vendor/binaryajax.js"></script>
+        <script src="js/vendor/exif.js"></script>
+        
+        <script src="js/plugins.js"></script>
+        <script src="js/camera.js"></script>
+        <script src="js/canvas.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/mobile.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/loader.js"></script>
+        <script src="js/init.js"></script>
+
+   
+    </body>
+</html>
